@@ -16,6 +16,19 @@
 		39F321C82AFB21A8002023AB /* HomeChefHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321C72AFB21A8002023AB /* HomeChefHubTests.swift */; };
 		39F321D22AFB21A8002023AB /* HomeChefHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321D12AFB21A8002023AB /* HomeChefHubUITests.swift */; };
 		39F321D42AFB21A8002023AB /* HomeChefHubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321D32AFB21A8002023AB /* HomeChefHubUITestsLaunchTests.swift */; };
+		39F321E12AFB24A5002023AB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321E02AFB24A4002023AB /* Meal.swift */; };
+		39F321E32AFCC7B6002023AB /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321E22AFCC7B6002023AB /* MealCell.swift */; };
+		39F321E92AFCDA55002023AB /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 39F321E82AFCDA55002023AB /* Nuke */; };
+		39F321EB2AFCDA55002023AB /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 39F321EA2AFCDA55002023AB /* NukeExtensions */; };
+		39F321ED2AFCDA55002023AB /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 39F321EC2AFCDA55002023AB /* NukeUI */; };
+		39F321EF2AFCDA55002023AB /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 39F321EE2AFCDA55002023AB /* NukeVideo */; };
+		39F321F12AFF54C9002023AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321F02AFF54C9002023AB /* DetailViewController.swift */; };
+		39F321F32AFFC407002023AB /* AddtoCookBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321F22AFFC407002023AB /* AddtoCookBookViewController.swift */; };
+		39F321F52AFFD541002023AB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321F42AFFD541002023AB /* RegistrationViewController.swift */; };
+		39F321F72AFFE832002023AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321F62AFFE832002023AB /* LoginViewController.swift */; };
+		39F321F92AFFE84A002023AB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321F82AFFE84A002023AB /* SignupViewController.swift */; };
+		39F321FB2B00BED4002023AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39F321FA2B00BED4002023AB /* GoogleService-Info.plist */; };
+		39F321FE2B00C8A8002023AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 39F321FD2B00C8A8002023AB /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +62,14 @@
 		39F321CD2AFB21A8002023AB /* HomeChefHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeChefHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F321D12AFB21A8002023AB /* HomeChefHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChefHubUITests.swift; sourceTree = "<group>"; };
 		39F321D32AFB21A8002023AB /* HomeChefHubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChefHubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		39F321E02AFB24A4002023AB /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		39F321E22AFCC7B6002023AB /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
+		39F321F02AFF54C9002023AB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		39F321F22AFFC407002023AB /* AddtoCookBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtoCookBookViewController.swift; sourceTree = "<group>"; };
+		39F321F42AFFD541002023AB /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		39F321F62AFFE832002023AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		39F321F82AFFE84A002023AB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		39F321FA2B00BED4002023AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F321ED2AFCDA55002023AB /* NukeUI in Frameworks */,
+				39F321FE2B00C8A8002023AB /* FirebaseAuth in Frameworks */,
+				39F321E92AFCDA55002023AB /* Nuke in Frameworks */,
+				39F321EB2AFCDA55002023AB /* NukeExtensions in Frameworks */,
+				39F321EF2AFCDA55002023AB /* NukeVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +127,19 @@
 			children = (
 				39F321B02AFB21A6002023AB /* AppDelegate.swift */,
 				39F321B22AFB21A6002023AB /* SceneDelegate.swift */,
+				39F321F42AFFD541002023AB /* RegistrationViewController.swift */,
+				39F321F62AFFE832002023AB /* LoginViewController.swift */,
+				39F321F82AFFE84A002023AB /* SignupViewController.swift */,
 				39F321B42AFB21A6002023AB /* ViewController.swift */,
+				39F321F02AFF54C9002023AB /* DetailViewController.swift */,
+				39F321F22AFFC407002023AB /* AddtoCookBookViewController.swift */,
+				39F321E02AFB24A4002023AB /* Meal.swift */,
+				39F321E22AFCC7B6002023AB /* MealCell.swift */,
 				39F321B62AFB21A6002023AB /* Main.storyboard */,
 				39F321B92AFB21A8002023AB /* Assets.xcassets */,
 				39F321BB2AFB21A8002023AB /* LaunchScreen.storyboard */,
 				39F321BE2AFB21A8002023AB /* Info.plist */,
+				39F321FA2B00BED4002023AB /* GoogleService-Info.plist */,
 			);
 			path = HomeChefHub;
 			sourceTree = "<group>";
@@ -143,6 +177,13 @@
 			dependencies = (
 			);
 			name = HomeChefHub;
+			packageProductDependencies = (
+				39F321E82AFCDA55002023AB /* Nuke */,
+				39F321EA2AFCDA55002023AB /* NukeExtensions */,
+				39F321EC2AFCDA55002023AB /* NukeUI */,
+				39F321EE2AFCDA55002023AB /* NukeVideo */,
+				39F321FD2B00C8A8002023AB /* FirebaseAuth */,
+			);
 			productName = HomeChefHub;
 			productReference = 39F321AD2AFB21A6002023AB /* HomeChefHub.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +256,10 @@
 				Base,
 			);
 			mainGroup = 39F321A42AFB21A6002023AB;
+			packageReferences = (
+				39F321E72AFCDA55002023AB /* XCRemoteSwiftPackageReference "Nuke" */,
+				39F321FC2B00C8A8002023AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 39F321AE2AFB21A6002023AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39F321BD2AFB21A8002023AB /* LaunchScreen.storyboard in Resources */,
+				39F321FB2B00BED4002023AB /* GoogleService-Info.plist in Resources */,
 				39F321BA2AFB21A8002023AB /* Assets.xcassets in Resources */,
 				39F321B82AFB21A6002023AB /* Main.storyboard in Resources */,
 			);
@@ -258,7 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F321F72AFFE832002023AB /* LoginViewController.swift in Sources */,
+				39F321E32AFCC7B6002023AB /* MealCell.swift in Sources */,
+				39F321F92AFFE84A002023AB /* SignupViewController.swift in Sources */,
+				39F321F32AFFC407002023AB /* AddtoCookBookViewController.swift in Sources */,
+				39F321F52AFFD541002023AB /* RegistrationViewController.swift in Sources */,
+				39F321E12AFB24A5002023AB /* Meal.swift in Sources */,
 				39F321B52AFB21A6002023AB /* ViewController.swift in Sources */,
+				39F321F12AFF54C9002023AB /* DetailViewController.swift in Sources */,
 				39F321B12AFB21A6002023AB /* AppDelegate.swift in Sources */,
 				39F321B32AFB21A6002023AB /* SceneDelegate.swift in Sources */,
 			);
@@ -437,6 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2UA27ZS22;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeChefHub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -464,6 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y2UA27ZS22;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeChefHub/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -596,6 +651,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		39F321E72AFCDA55002023AB /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		39F321FC2B00C8A8002023AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		39F321E82AFCDA55002023AB /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39F321E72AFCDA55002023AB /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		39F321EA2AFCDA55002023AB /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39F321E72AFCDA55002023AB /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		39F321EC2AFCDA55002023AB /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39F321E72AFCDA55002023AB /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		39F321EE2AFCDA55002023AB /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39F321E72AFCDA55002023AB /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+		39F321FD2B00C8A8002023AB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39F321FC2B00C8A8002023AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 39F321A52AFB21A6002023AB /* Project object */;
 }
