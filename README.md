@@ -32,10 +32,10 @@ The App is a culinary companion designed to simplify meal planning and cooking. 
 
 **Required Must-have Stories**
 
-* Users can discover and view recipes from various cuisines and dietary preferences.
-* Users can create personalized meal plans.
-* Users can access step-by-step cooking instructions for recipes.
-* Users can generate shopping lists based on selected recipes.
+* [x] Users can discover and view recipes from various cuisines and dietary preferences.
+* [ ] Users can create personalized meal plans.
+* [x] Users can access step-by-step cooking instructions for recipes.
+* [ ] Users can generate shopping lists based on selected recipes.
 
 **Optional Nice-to-have Stories**
 
@@ -43,26 +43,26 @@ The App is a culinary companion designed to simplify meal planning and cooking. 
 
 ### 2. Screen Archetypes
 
-- Login/Sign-up Screen
-* Users can either log in with their existing credentials or create a new account.
-* Once logged in, they can access the app's main features, such as the Home Screen (Recipe Feed), Meal Planning, Recipe Details, Shopping Lists, and User-Generated Content (if the optional feature is included).
+- Login/Sign-up Screen: 
+  * Users can either log in with their existing credentials or create a new account.
+  * Once logged in, they can access the app's main features, such as the Home Screen (Recipe Feed), Meal Planning, Recipe Details, Shopping Lists, and User-Generated Content (if the optional feature is included).
 - Recipe Feed Screen (Home Screen):
-* After logging in, users are directed to the Recipe Feed Screen, where they can discover and browse recipes.
-* Featured recipes are displayed.
-* Users can search for recipes by various criteria like cuisine, dietary preferences, and ingredients.
+  * After logging in, users are directed to the Recipe Feed Screen, where they can discover and browse recipes.
+  * Featured recipes are displayed.
+  * Users can search for recipes by various criteria like cuisine, dietary preferences, and ingredients.
 - Meal Planning Screen:
-* Users can create and manage personalized meal plans.
-* They can add recipes to their meal plans.
-* Users can generate shopping lists from their meal plans.
+  * Users can create and manage personalized meal plans.
+  * They can add recipes to their meal plans.
+  * Users can generate shopping lists from their meal plans.
 - Recipe Detail Screen:
-* Users can access detailed information about a selected recipe.
-* This screen displays ingredients, cooking instructions, images, and videos for the recipe.
+  * Users can access detailed information about a selected recipe.
+  * This screen displays ingredients, cooking instructions, images, and videos for the recipe.
 - Shopping List Screen:
-* Users can view and manage their shopping lists.
-* The screen shows the list of ingredients needed for selected recipes.
+  * Users can view and manage their shopping lists.
+  * The screen shows the list of ingredients needed for selected recipes.
 - User-Generated Content Screen (Optional):
-* If the user-generated content feature is implemented, this screen allows users to contribute their own recipes, cooking tips, and variations.
-* Users can explore and engage with content shared by other community members.
+  * If the user-generated content feature is implemented, this screen allows users to contribute their own recipes, cooking tips, and variations.
+  * Users can explore and engage with content shared by other community members.
 
 ### 3. Navigation
 
