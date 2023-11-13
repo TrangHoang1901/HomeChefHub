@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class SignupViewController: UIViewController {
+    
+    var user: UserData!
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -18,19 +20,29 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     @IBAction func signupClicked(_ sender: UIButton) {
-        guard let email = emailTextField.text else { return }
-        guard let firstName = firstnameTextField.text else { return }
-        guard let lastName = lastnameTextField.text else { return }
+        guard let newemail = emailTextField.text else { return }
+        guard let first = firstnameTextField.text else { return }
+        guard let last = lastnameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        Auth.auth().createUser(withEmail: email, password: password) { firebaseResult, error in
-            if let e = error {
+        Auth.auth().createUser(withEmail: newemail, password: password) { [self] firebaseResult, error in
+            if error != nil {
                 print("error")
                 self.errorLabel.text = "Invalid Email or Password"
                 self.errorLabel.textColor = .white
             }
             else {
                 // Go to Our Home Screen
-                self.performSegue(withIdentifier: "HomeScreen", sender: self)
+                let newUser = UserData(firstName: first, lastName: last, email: newemail)
+                self.user = newUser  // Ensure 'user' is initialized before modifying its properties
+                self.user.addUserProfile()
+                self.user.printAllUsers()
+                
+                let onboardingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenView")
+                if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate,
+                   let window = sceneDelegate.window {
+                    window.rootViewController = onboardingViewController
+                }
+                //self.performSegue(withIdentifier: "introView", sender: self)
             }
         }
     }
@@ -38,6 +50,14 @@ class SignupViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let currentEmail = Auth.auth().currentUser?.email
+        let currentuser = UserData.getUsers().first(where: { $0.email == currentEmail })
+        
+        guard let addtoCookBookViewController = segue.destination as? AddtoCookBookViewController else { return }
+        addtoCookBookViewController.currentUser = currentuser
     }
     
 

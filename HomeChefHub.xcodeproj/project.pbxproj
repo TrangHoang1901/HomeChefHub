@@ -29,6 +29,8 @@
 		39F321F92AFFE84A002023AB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321F82AFFE84A002023AB /* SignupViewController.swift */; };
 		39F321FB2B00BED4002023AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39F321FA2B00BED4002023AB /* GoogleService-Info.plist */; };
 		39F321FE2B00C8A8002023AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 39F321FD2B00C8A8002023AB /* FirebaseAuth */; };
+		39F322002B00DAC6002023AB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F321FF2B00DAC6002023AB /* User.swift */; };
+		39F322022B00FAAE002023AB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F322012B00FAAE002023AB /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		39F321F62AFFE832002023AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		39F321F82AFFE84A002023AB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		39F321FA2B00BED4002023AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39F321FF2B00DAC6002023AB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		39F322012B00FAAE002023AB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +134,12 @@
 				39F321F42AFFD541002023AB /* RegistrationViewController.swift */,
 				39F321F62AFFE832002023AB /* LoginViewController.swift */,
 				39F321F82AFFE84A002023AB /* SignupViewController.swift */,
+				39F322012B00FAAE002023AB /* ProfileViewController.swift */,
 				39F321B42AFB21A6002023AB /* ViewController.swift */,
 				39F321F02AFF54C9002023AB /* DetailViewController.swift */,
 				39F321F22AFFC407002023AB /* AddtoCookBookViewController.swift */,
 				39F321E02AFB24A4002023AB /* Meal.swift */,
+				39F321FF2B00DAC6002023AB /* User.swift */,
 				39F321E22AFCC7B6002023AB /* MealCell.swift */,
 				39F321B62AFB21A6002023AB /* Main.storyboard */,
 				39F321B92AFB21A8002023AB /* Assets.xcassets */,
@@ -310,10 +316,12 @@
 				39F321F32AFFC407002023AB /* AddtoCookBookViewController.swift in Sources */,
 				39F321F52AFFD541002023AB /* RegistrationViewController.swift in Sources */,
 				39F321E12AFB24A5002023AB /* Meal.swift in Sources */,
+				39F322022B00FAAE002023AB /* ProfileViewController.swift in Sources */,
 				39F321B52AFB21A6002023AB /* ViewController.swift in Sources */,
 				39F321F12AFF54C9002023AB /* DetailViewController.swift in Sources */,
 				39F321B12AFB21A6002023AB /* AppDelegate.swift in Sources */,
 				39F321B32AFB21A6002023AB /* SceneDelegate.swift in Sources */,
+				39F322002B00DAC6002023AB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

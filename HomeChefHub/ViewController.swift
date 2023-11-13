@@ -8,6 +8,7 @@
 import UIKit
 import Nuke
 import NukeExtensions
+import Firebase
 
 class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,10 +54,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        // MARK: - Pass the selected movie to the Detail View Controller
-
-        // Get the index path for the selected row.
-        // `indexPathForSelectedRow` returns an optional `indexPath`, so we'll unwrap it with a guard.
         guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
 
         // Get the selected movie from the movies array using the selected index path's row
@@ -66,6 +63,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         guard let detailViewController = segue.destination as? DetailViewController else { return }
 
         detailViewController.meal = selectedMeal
+        
+        let currentEmail = Auth.auth().currentUser?.email
+        let currentuser = UserData.getUsers().first(where: { $0.email == currentEmail })
+        detailViewController.user = currentuser
     }
     
     private func fetchMeals() {

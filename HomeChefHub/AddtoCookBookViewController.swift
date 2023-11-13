@@ -7,6 +7,7 @@
 
 import UIKit
 import NukeExtensions
+import Firebase
 
 class AddtoCookBookViewController: UIViewController, UITableViewDataSource {
 
@@ -14,28 +15,26 @@ class AddtoCookBookViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var emptyCookBook: UILabel!
     var addtoCookBooks: [Meal] = []
+    var currentUser: UserData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        defer {
-            // Show the "Empty Favorites" label if there are no favorite movies
-            if addtoCookBooks.isEmpty {
-                emptyCookBook.isHidden = false
-            }
-            else {
-                emptyCookBook.isHidden = true
-            }
-        }
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         tableView.dataSource = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        defer {
+            // Show the "Empty Favorites" label if there are no favorite movies
+            emptyCookBook.isHidden = !addtoCookBooks.isEmpty
+        }
 
         // 1.
-        let meals = Meal.getMeals(forKey: Meal.addtoCookBookKey)
-        // 2.
+        //let meals = Meal.getMeals(forKey: UserData.addtoCookBookKey)
+        let meals = Meal.getMeals(forKey: UserData.addtoCookBookKey)
         self.addtoCookBooks = meals
         // 3.
         tableView.reloadData()

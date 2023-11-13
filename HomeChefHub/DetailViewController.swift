@@ -7,6 +7,7 @@
 
 import UIKit
 import NukeExtensions
+import Firebase
 
 
 
@@ -43,6 +44,7 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     
     var meal: Meal!
     var ingredients: [Ingredient] = []
+    var user: UserData!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -50,7 +52,6 @@ class DetailViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func didTapFavoriteButton(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-        
         if sender.isSelected {
             // 1.
             meal.addtoFavorites()
@@ -67,18 +68,18 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         
         if sender.isSelected {
             // 1.
-            meal.addtoCookBookKeyMeals()
+            //meal.addtoCookBookKeyMeals()
+            user.addtoCookBookKeyMeals(meal: meal)
         } else {
             // 2.
-            meal.removeFromAddtoCookBookKeyMeals()
+            //meal.removeFromAddtoCookBookKeyMeals()
+            user.removeFromAddtoCookBookKeyMeals(meal: meal)
         }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         // Do any additional setup after loading the view.
         // MARK: - Fetch and set images for image views
         if let posterPath = meal.strMealThumb,
@@ -97,9 +98,9 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         
         //favoriteButton.layer.cornerRadius = min(favoriteButton.frame.width, favoriteButton.frame.height) / 2
-
+        
         // 1.
-        let favorites = Meal.getMeals(forKey: Meal.addtoFavorites)
+        let favorites = Meal.getMeals(forKey: UserData.addtoCookBookKey)
         // 2.
         if favorites.contains(meal) {
             // 3.
@@ -112,7 +113,9 @@ class DetailViewController: UIViewController, UITableViewDataSource {
         addtoCookBook.layer.cornerRadius = 0.05 * addtoCookBook.frame.size.width
         
         // 1.
-        let addtoCookBooks = Meal.getMeals(forKey: Meal.addtoCookBookKey)
+        let addtoCookBooks = Meal.getMeals(forKey: UserData.addtoCookBookKey)
+        //user.addtoCookBookKeyMeals(meal: meal)
+        //let addtoCookBooks = user.cookbook
         // 2.
         if addtoCookBooks.contains(meal) {
             // 3.

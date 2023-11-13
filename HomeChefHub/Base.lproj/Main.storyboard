@@ -67,7 +67,7 @@
                                             <outlet property="mealImageView" destination="fDo-YO-Pzx" id="4QA-HJ-0qU"/>
                                             <outlet property="mealNameLabel" destination="wa3-Yb-rSi" id="12v-63-sfL"/>
                                             <outlet property="mealTagsLabel" destination="eks-PJ-UWD" id="JNT-t0-wSF"/>
-                                            <segue destination="sPk-Lz-MAJ" kind="show" id="AxC-iP-oIx"/>
+                                            <segue destination="sPk-Lz-MAJ" kind="modal" id="AxC-iP-oIx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -153,6 +153,7 @@
                                             <outlet property="mealImageView" destination="V9p-2Y-iUR" id="ZN4-3V-08I"/>
                                             <outlet property="mealNameLabel" destination="gGy-mj-lX5" id="4tc-19-Ydj"/>
                                             <outlet property="mealTagsLabel" destination="bIc-5V-d0G" id="gHF-AA-9C0"/>
+                                            <segue destination="sPk-Lz-MAJ" kind="modal" id="Gx2-KA-9QE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -160,24 +161,102 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hMc-R8-xM3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="pBl-Os-EKC"/>
                     <connections>
                         <outlet property="emptyCookBook" destination="Owz-vM-gcX" id="A7K-Gv-gxo"/>
                         <outlet property="tableView" destination="pbi-37-6bo" id="jw0-N0-jB6"/>
-                        <segue destination="sPk-Lz-MAJ" kind="show" id="Tvk-kU-sZo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmG-hC-UZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2735.1145038167938" y="672.53521126760563"/>
         </scene>
+        <!--ProfileDetail-->
+        <scene sceneID="RtA-hX-f96">
+            <objects>
+                <viewController storyboardIdentifier="profileViewController" title="ProfileDetail" id="sz6-E5-kUk" customClass="ProfileViewController" customModule="HomeChefHub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z76-xE-EVC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as3-mD-0dM">
+                                <rect key="frame" x="52" y="407" width="145" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krp-3k-IAL">
+                                <rect key="frame" x="220" y="407" width="146" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Asw-9T-TED">
+                                <rect key="frame" x="99" y="126" width="194" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hello@world.com" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F65-f8-jsM">
+                                <rect key="frame" x="66" y="320" width="261" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijN-Fm-AxC">
+                                <rect key="frame" x="52" y="388" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlq-62-bTJ">
+                                <rect key="frame" x="220" y="388" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ic9-CB-ocB">
+                                <rect key="frame" x="113" y="678" width="167" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="22"/>
+                                <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="isclickedSignOut:" destination="sz6-E5-kUk" eventType="touchUpInside" id="Z55-Ds-10e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="L3x-BP-KOz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="profile"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qzJ-05-1Wc"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="F65-f8-jsM" id="26I-x1-lVl"/>
+                        <outlet property="firstNameLabel" destination="as3-mD-0dM" id="D3k-zU-2p1"/>
+                        <outlet property="lastNameLabel" destination="Krp-3k-IAL" id="VFM-bf-APH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxB-f6-g5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2733.5877862595421" y="1545.7746478873239"/>
+        </scene>
         <!--Meal Detail-->
         <scene sceneID="qho-Dh-7Iq">
             <objects>
                 <viewController title="Meal Detail" id="sPk-Lz-MAJ" customClass="DetailViewController" customModule="HomeChefHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="TLl-Nz-nec">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rpn-4V-jek">
@@ -355,12 +434,12 @@
         <!--Registration-->
         <scene sceneID="1CL-6f-I0K">
             <objects>
-                <viewController title="Registration" id="LOG-Zm-qa2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="introView" title="Registration" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LOG-Zm-qa2" customClass="RegistrationViewController" customModule="HomeChefHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DVB-ne-Kzw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="78193275" translatesAutoresizingMaskIntoConstraints="NO" id="oRm-2g-bka" userLabel="BackDrop">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" restorationIdentifier="introView" image="78193275" translatesAutoresizingMaskIntoConstraints="NO" id="oRm-2g-bka" userLabel="BackDrop">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
@@ -388,7 +467,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Create An Account"/>
                                 <connections>
-                                    <segue destination="7EF-GX-mwu" kind="show" id="slU-QI-kJU"/>
+                                    <segue destination="7EF-GX-mwu" kind="modal" id="slU-QI-kJU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nN-ee-UBL">
@@ -403,7 +482,7 @@
                                     <color key="titleShadowColor" systemColor="systemPinkColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tRk-Wj-6WE" kind="show" id="RWT-Dr-E8q"/>
+                                    <segue destination="tRk-Wj-6WE" kind="modal" id="RWT-Dr-E8q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -414,34 +493,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydY-De-cQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1677" y="301"/>
+            <point key="canvasLocation" x="-1360" y="274"/>
         </scene>
         <!--Register-->
         <scene sceneID="J5F-Wr-gyg">
             <objects>
                 <viewController title="Register" id="7EF-GX-mwu" customClass="SignupViewController" customModule="HomeChefHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Byy-Gf-W50">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-Ke-cUl">
+                                <rect key="frame" x="53" y="228" width="153" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="40"/>
+                                <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pvh-wS-yQU">
                                 <rect key="frame" x="53" y="303" width="286" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7KU-Fr-azq">
                                 <rect key="frame" x="53" y="356" width="286" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWs-D3-ZLr">
                                 <rect key="frame" x="53" y="409" width="286" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-k8-fXL">
+                                <rect key="frame" x="53" y="451" width="286" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ErrorLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="io3-Nc-MxK">
+                                <rect key="frame" x="53" y="504" width="286" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Wv-DpQ">
                                 <rect key="frame" x="83" y="626" width="227" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -454,30 +557,10 @@
                                     <action selector="signupClicked:" destination="7EF-GX-mwu" eventType="touchUpInside" id="5RH-VN-Yjj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-Ke-cUl">
-                                <rect key="frame" x="53" y="228" width="153" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="40"/>
-                                <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ErrorLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="io3-Nc-MxK">
-                                <rect key="frame" x="53" y="504" width="286" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-k8-fXL">
-                                <rect key="frame" x="53" y="451" width="286" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qo3-G5-PhT"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
-                        <color key="tintColor" systemColor="systemGreenColor"/>
+                        <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="uFf-uf-jeq"/>
                     <connections>
@@ -486,8 +569,6 @@
                         <outlet property="firstnameTextField" destination="7KU-Fr-azq" id="f4s-rP-dPd"/>
                         <outlet property="lastnameTextField" destination="BWs-D3-ZLr" id="WAX-wq-QLp"/>
                         <outlet property="passwordTextField" destination="d4f-k8-fXL" id="kRe-UZ-Yg8"/>
-                        <outlet property="signupClicked" destination="x39-Wv-DpQ" id="zpL-26-HSA"/>
-                        <segue destination="yP9-IE-snm" kind="show" identifier="HomeScreen" id="Nrd-Vj-co0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yB5-Mx-3vN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -499,7 +580,7 @@
             <objects>
                 <viewController title="Login" id="tRk-Wj-6WE" customClass="LoginViewController" customModule="HomeChefHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9WL-KL-Xgu">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVI-4h-WPC">
@@ -519,6 +600,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTH-a8-oi5">
                                 <rect key="frame" x="53" y="373" width="286" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -558,8 +640,8 @@
                     <navigationItem key="navigationItem" id="hcg-f8-LGT"/>
                     <connections>
                         <outlet property="emailTextField" destination="eTH-a8-oi5" id="VYH-wi-3TV"/>
+                        <outlet property="errorLabel" destination="Dgu-YT-8f1" id="zpQ-Lw-xUW"/>
                         <outlet property="passwordTextField" destination="SbY-E2-czJ" id="bni-p4-WVs"/>
-                        <segue destination="yP9-IE-snm" kind="show" identifier="HomeScreen" id="vbL-de-oKV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiQ-Vu-5oO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -593,7 +675,7 @@
             <objects>
                 <navigationController title="AddedtoCookBook" automaticallyAdjustsScrollViewInsets="NO" id="zdu-sx-hnK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My CookBook" image="book.fill" catalog="system" id="jqX-aC-suP">
-                        <color key="badgeColor" systemColor="systemGreenColor"/>
+                        <color key="badgeColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QyW-PR-hPp">
@@ -613,7 +695,7 @@
         <!--HomeScreen-->
         <scene sceneID="wgU-t7-YCN">
             <objects>
-                <tabBarController title="HomeScreen" automaticallyAdjustsScrollViewInsets="NO" id="yP9-IE-snm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeScreenView" title="HomeScreen" automaticallyAdjustsScrollViewInsets="NO" id="yP9-IE-snm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="28K-yx-KCw"/>
                     <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lpc-JY-uSb">
@@ -627,11 +709,12 @@
                     <connections>
                         <segue destination="ccS-eF-f3o" kind="relationship" relationship="viewControllers" id="3xL-c3-PfB"/>
                         <segue destination="zdu-sx-hnK" kind="relationship" relationship="viewControllers" id="3Iv-zO-BXy"/>
+                        <segue destination="Fcg-T8-J1p" kind="relationship" relationship="viewControllers" id="YII-TB-t4Q"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6JP-VO-2sr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="274"/>
+            <point key="canvasLocation" x="456" y="274"/>
         </scene>
         <!--Register/Login-->
         <scene sceneID="1ao-wZ-4KM">
@@ -649,14 +732,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8J7-mm-l3b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2724" y="301"/>
+            <point key="canvasLocation" x="-2271" y="274"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="reV-bp-1X0">
+            <objects>
+                <navigationController title="Profile" automaticallyAdjustsScrollViewInsets="NO" id="Fcg-T8-J1p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="eUc-1U-iMO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zvc-he-W6b">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sz6-E5-kUk" kind="relationship" relationship="rootViewController" id="CL7-Zc-P6A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aoh-Qf-9bI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="1547"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vbL-de-oKV"/>
-        <segue reference="AxC-iP-oIx"/>
+        <segue reference="Gx2-KA-9QE"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="78193275" width="1080" height="1920"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
@@ -664,6 +765,8 @@
         <image name="heart.circle" catalog="system" width="128" height="123"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

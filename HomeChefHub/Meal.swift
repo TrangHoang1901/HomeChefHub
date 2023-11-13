@@ -204,10 +204,8 @@ struct Ingredient {
 
 
 // Methods for saving, retrieving and removing movies from favorites
+
 extension Meal {
-    static var addtoCookBookKey: String {
-        return "My CookBook"
-    }
 
     static func save(_ meals: [Meal], forKey key: String) {
         // 1.
@@ -232,7 +230,12 @@ extension Meal {
             return []
         }
     }
+
     
+    static var addtoCookBookKey: String {
+        return "My CookBook"
+    }
+   
     func addtoCookBookKeyMeals() {
         // 1.
         var addtoCookBookKeyMeals = Meal.getMeals(forKey: Meal.addtoCookBookKey)
@@ -253,6 +256,7 @@ extension Meal {
         // 4.
         Meal.save(addtoCookBookKeyMeals, forKey: Meal.addtoCookBookKey)
     }
+    
     static var addtoFavorites: String {
         return "Favorites"
     }
